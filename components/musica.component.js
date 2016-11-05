@@ -20,7 +20,10 @@
     top.apiData = apitop.get()
       .$promise.then(function(response) {
           //Se pone el .results para obtener el data, en algunos Json puede ser data
-        top.artist = response.results;
+          //con esto se jalan todos los albunes
+        top.artists = response.topalbums.album;
+        console.log(response.topalbums);
+        console.log(response.topalbums.album[1].image);
       })
   }
 

@@ -1,1 +1,9 @@
-<h1>Soy el componente</h1>
+<!-- Se debe correr el servidor para que corra el servidor -->
+<h1> albums</h1>
+<section>
+  <p ng-repeat="char in $ctrl.artists">{{char.artist.name}}
+    <br>{{char.playcount}}
+    <br>{{char.name}}
+    <br><img ng-src="{{char.image[0]['#text']}}" alt="" />
+  </p>
+</section>
