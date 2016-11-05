@@ -15,7 +15,7 @@
       ///2.0/?method=artist.gettopalbums&artist=cher&api_key=5c51e96e6228ed1500eac246757571be&format=json
       var api_key = "5c51e96e6228ed1500eac246757571be";
       //http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=cher&api_key=YOUR_API_KEY&format=json
-      return $resource("http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=radiohead&api_key=" +api_key+"&format=json");
+      return $resource("http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=:artist&api_key=" + api_key + "&format=json");
     }
 
 
