@@ -22,10 +22,13 @@
     top.artists = null;
     top.apiData = apitop.get({
       artist : top.artist,
-    })
+      })
       .$promise.then(function(response) {
           //Se pone el .results para obtener el data, en algunos Json puede ser data
           //con esto se jalan todos los albunes
+             //top.artists = response.topalbums.album;
+             console.log(response.topalbums);
+             //console.log(response.topalbums.album[1].image);
           try {
              top.artists = response.topalbums.album;
              console.log(response.topalbums);
@@ -34,7 +37,7 @@
           }
           catch (excepcion) {
              // sentencias para manejar cualquier excepción
-             console.log("no jalo los datos bien :C"); // pasar el objeto de la excepción al manejador de errores
+             console.log("no se que pasa"); // pasar el objeto de la excepción al manejador de errores
           }
       })
   }
